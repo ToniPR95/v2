@@ -1,0 +1,58 @@
+<div class="main">
+  <form class="k-form k-form-horizontal" [formGroup]="loginForm">
+    <fieldset class="k-form-fieldset">
+      <legend class="k-form-legend" style="font-weight: bold">Login</legend>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label [for]="username" text="Uporabniško ime"></kendo-label>
+        <kendo-textbox
+          formControlName="username"
+          [clearButton]="true"
+          #username
+        ></kendo-textbox>
+
+        <kendo-formerror>Potrebno je vnesti uporabniško ime</kendo-formerror>
+      </kendo-formfield>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label [for]="password" text="Geslo"></kendo-label>
+        <kendo-textbox
+          formControlName="password"
+          [clearButton]="true"
+          #password
+        >
+        </kendo-textbox>
+
+        <kendo-formerror *ngIf="!isNotEmpty()"
+          >Potrebno je vnesti geslo</kendo-formerror
+        >
+        <kendo-formerror>Geslo mora vsebovati najmanj 8 znakov</kendo-formerror>
+      </kendo-formfield>
+    </fieldset>
+
+    <div class="k-form-buttons">
+      <button
+        kendoButton
+        [primary]="true"
+        (click)="submitForm()"
+        [disabled]="!isFormValid()"
+      >
+        Vpis
+      </button>
+    </div>
+  </form>
+
+  <div class="error-container" *ngIf="isFailedLogin">
+    <div class="icon-box">
+      <kendo-icon
+        name="warning"
+        size="medium"
+        style="color: #c40000"
+      ></kendo-icon>
+    </div>
+    <div class="text-box">
+      <h4>Napaka pri vpisu</h4>
+      <p class="error-message">{{ errorMessage }}</p>
+    </div>
+  </div>
+</div>

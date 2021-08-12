@@ -1,0 +1,68 @@
+/* :root {
+  --alert-color: #c40000;
+  --alert-shadow-color: #fcf4f4;
+} */
+
+.main {
+	display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  height: 70vh;
+}
+
+.k-form {
+	width: 350px;
+}
+
+.k-form-legend {
+  display: flex;
+  justify-content: center;
+}
+
+.k-form-horizontal .k-form-field > .k-label, .k-form-horizontal .k-form-field > kendo-label, .k-form-horizontal .k-form-field > .k-form-label {
+  width: 30%;
+}
+
+.k-form-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.k-form-buttons > button {
+  width: 100px;
+  border-radius: 16px;
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #c40000;
+  box-shadow: 0 0 0 4px #fcf4f4 inset;
+  border-radius: 4px;
+  padding: 12px;
+  gap: 8px;
+  margin: 10px 0 0;
+  width: 326px;
+
+}
+
+.icon-box {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.text-box {
+  width: 50%;
+}
+
+.text-box > h4 {
+  color: #c40000;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.error-message {
+  margin: 4px 0;
+}
