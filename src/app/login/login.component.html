@@ -4,7 +4,11 @@
       <legend class="k-form-legend" style="font-weight: bold">Login</legend>
 
       <kendo-formfield orientation="horizontal">
-        <kendo-label [for]="username" text="Uporabniško ime"></kendo-label>
+        <kendo-label
+          class="username"
+          [for]="username"
+          text="Uporabniško ime"
+        ></kendo-label>
         <kendo-textbox
           formControlName="username"
           [clearButton]="true"

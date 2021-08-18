@@ -11,8 +11,18 @@
   height: 70vh;
 }
 
+
 .k-form {
 	width: 350px;
+}
+@media only screen and (max-width: 400px) {
+  .k-form {width: 280px}
+}
+
+.k-form-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .k-form-legend {
@@ -22,6 +32,10 @@
 
 .k-form-horizontal .k-form-field > .k-label, .k-form-horizontal .k-form-field > kendo-label, .k-form-horizontal .k-form-field > .k-form-label {
   width: 30%;
+}
+
+.username {
+  text-align: right;
 }
 
 .k-form-buttons {
@@ -44,7 +58,9 @@
   gap: 8px;
   margin: 10px 0 0;
   width: 326px;
-
+}
+@media only screen and (max-width: 400px) {
+  .error-container {width: 280px}
 }
 
 .icon-box {
@@ -66,3 +82,5 @@
 .error-message {
   margin: 4px 0;
 }
+
+

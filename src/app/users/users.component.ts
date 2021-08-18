@@ -1,6 +1,8 @@
+import { UsersService } from './../users.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
-// import { categories } from "./data.categories";
+import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
 
 @Component({
   selector: 'app-users',
@@ -8,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent implements OnInit {
-  // public gridData: any[] = products;
+  public gridData: Observable<any> = new Observable();
 
-  constructor() {}
+  constructor(private users: UsersService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.gridData = this.users.fetchUsers();
+  }
 }

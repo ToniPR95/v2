@@ -1,0 +1,4 @@
+.k-grid td {
+  display: flex;
+  justify-content: space-around;
+}

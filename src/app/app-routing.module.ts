@@ -18,16 +18,13 @@ const routes: Routes = [
       import('./login/login.module').then((m) => m.LoginModule),
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
-  },
-  {
     path: 'welcome-screen',
     loadChildren: () =>
       import('./welcome-screen/welcome-screen.module').then(
         (m) => m.WelcomeScreenModule
       ),
   },
+  { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
   {
     path: '**',
     redirectTo: 'login',
