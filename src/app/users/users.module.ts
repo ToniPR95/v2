@@ -19,9 +19,10 @@ import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { DialogModule } from '@progress/kendo-angular-dialog';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { LabelModule } from '@progress/kendo-angular-label';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
-  declarations: [UsersComponent],
+  declarations: [UsersComponent, UserComponent],
   imports: [
     CommonModule,
     UsersRoutingModule,

@@ -1,1 +1,129 @@
 <p>user works!</p>
+
+<div class="main">
+  <form class="k-form k-form-horizontal" [formGroup]="userForm">
+    <fieldset class="k-form-fieldset">
+      <legend class="k-form-legend" style="font-weight: bold">Uporabnik</legend>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label class="name" [for]="name" text="Name"></kendo-label>
+        <kendo-textbox
+          formControlName="name"
+          [clearButton]="true"
+          #name
+        ></kendo-textbox>
+      </kendo-formfield>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label
+          class="username"
+          [for]="username"
+          text="Username"
+        ></kendo-label>
+        <kendo-textbox
+          formControlName="username"
+          [clearButton]="true"
+          #username
+        ></kendo-textbox>
+      </kendo-formfield>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label class="email" [for]="email" text="Email"></kendo-label>
+        <kendo-textbox
+          formControlName="email"
+          [clearButton]="true"
+          #email
+        ></kendo-textbox>
+      </kendo-formfield>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label class="street" [for]="street" text="Street"></kendo-label>
+        <kendo-textbox
+          formControlName="street"
+          [clearButton]="true"
+          #street
+        ></kendo-textbox>
+      </kendo-formfield>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label class="suite" [for]="suite" text="Suite"></kendo-label>
+        <kendo-textbox
+          formControlName="suite"
+          [clearButton]="true"
+          #suite
+        ></kendo-textbox>
+      </kendo-formfield>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label class="city" [for]="city" text="City"></kendo-label>
+        <kendo-textbox
+          formControlName="city"
+          [clearButton]="true"
+          #city
+        ></kendo-textbox>
+      </kendo-formfield>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label
+          class="zipcode"
+          [for]="zipcode"
+          text="Zipcode"
+        ></kendo-label>
+        <kendo-textbox
+          formControlName="zipcode"
+          [clearButton]="true"
+          #zipcode
+        ></kendo-textbox>
+      </kendo-formfield>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label
+          class="latitude"
+          [for]="latitude"
+          text="Latitude"
+        ></kendo-label>
+        <kendo-textbox
+          formControlName="latitude"
+          [clearButton]="true"
+          #latitude
+        ></kendo-textbox>
+      </kendo-formfield>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label
+          class="longitude"
+          [for]="longitude"
+          text="Longitude"
+        ></kendo-label>
+        <kendo-textbox
+          formControlName="longitude"
+          [clearButton]="true"
+          #longitude
+        ></kendo-textbox>
+      </kendo-formfield>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label class="phone" [for]="phone" text="Phone"></kendo-label>
+        <kendo-textbox
+          formControlName="phone"
+          [clearButton]="true"
+          #phone
+        ></kendo-textbox>
+      </kendo-formfield>
+
+      <kendo-formfield orientation="horizontal">
+        <kendo-label
+          class="website"
+          [for]="website"
+          text="Website"
+        ></kendo-label>
+        <kendo-textbox
+          formControlName="website"
+          [clearButton]="true"
+          #website
+        ></kendo-textbox>
+      </kendo-formfield>
+    </fieldset>
+  </form>
+</div>
+<button class="k-button" routerLink="/users">Nazaj</button>
