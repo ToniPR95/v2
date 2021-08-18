@@ -50,10 +50,10 @@
   ></kendo-grid-column>
   <kendo-grid-column title="Actions" [width]="150">
     <ng-template kendoGridCellTemplate let-dataItem>
-      <button class="k-button" routerLink="/user">
+      <button class="k-button" routerLink="/users/user">
         <kendo-icon name="eye" size="medium"></kendo-icon>
       </button>
-      <button class="k-button">
+      <button class="k-button" routerLink="/welcome-screen">
         <kendo-icon name="trash" size="medium"></kendo-icon>
       </button>
     </ng-template>

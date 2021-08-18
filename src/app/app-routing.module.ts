@@ -24,7 +24,10 @@ const routes: Routes = [
         (m) => m.WelcomeScreenModule
       ),
   },
-  { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
+  {
+    path: 'users/user',
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+  },
   {
     path: '**',
     redirectTo: 'login',
