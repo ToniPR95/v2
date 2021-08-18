@@ -2,7 +2,7 @@ import { UsersService } from './../users.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
+// import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
 
 @Component({
   selector: 'app-users',
