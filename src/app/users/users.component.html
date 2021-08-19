@@ -1,5 +1,10 @@
 <hr />
-<kendo-grid [data]="gridData | async" kendoGridSelectBy="id">
+<kendo-grid
+  [data]="gridData | async"
+  [kendoGridSelectBy]="'id'"
+  (selectedKeysChange)="selectedKeysChange($event)"
+  (edit)="editHandler($event)"
+>
   <kendo-grid-column
     field="name"
     title="Name"
@@ -55,6 +60,13 @@
       </button>
       <button class="k-button" routerLink="/welcome-screen">
         <kendo-icon name="trash" size="medium"></kendo-icon>
+      </button>
+      <button
+        kendoGridEditCommand
+        class="k-primary"
+        (click)="isRowInfo($event)"
+      >
+        Edit
       </button>
     </ng-template>
   </kendo-grid-column>

@@ -16,5 +16,18 @@ export class UsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.gridData = this.users.fetchUsers();
+    console.log(this.gridData);
+  }
+
+  isRowInfo(event: Event) {
+    console.log(event);
+  }
+
+  selectedKeysChange(rows: number[]) {
+    console.log(rows);
+  }
+
+  editHandler(event: any) {
+    console.log(event);
   }
 }
