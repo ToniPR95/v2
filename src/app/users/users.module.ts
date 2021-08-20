@@ -1,3 +1,5 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { UserPostsService } from './../user-posts.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -20,9 +22,10 @@ import { DialogModule } from '@progress/kendo-angular-dialog';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { UserComponent } from './user/user.component';
+import { UserPostsComponent } from './user-posts/user-posts.component';
 
 @NgModule({
-  declarations: [UsersComponent, UserComponent],
+  declarations: [UsersComponent, UserComponent, UserPostsComponent],
   imports: [
     CommonModule,
     UsersRoutingModule,
@@ -39,6 +42,6 @@ import { UserComponent } from './user/user.component';
     IconsModule,
     ButtonsModule,
   ],
-  providers: [UsersService],
+  providers: [UsersService, UserPostsService],
 })
 export class UsersModule {}

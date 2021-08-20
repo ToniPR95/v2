@@ -1,0 +1,18 @@
+<div class="posts-container">
+  <ol>
+    <li
+      style="border-style: inset; width: 400px; margin: 10px"
+      *ngFor="let userpost of this.userposts"
+    >
+      <span style="font-size: 20px; text-align: center; width: 400px">{{
+        userpost.title
+      }}</span>
+      <div>
+        <p>{{ userpost.body }}</p>
+      </div>
+      <div>
+        <p>UserID: {{ userpost.userId }}</p>
+      </div>
+    </li>
+  </ol>
+</div>

@@ -11,10 +11,6 @@ export class ArticlesComponent implements OnInit {
   title = 'Article by Jeetendra';
   posts: any;
 
-  // constructor() {}
-
-  // ngOnInit(): void {}
-
   constructor(private articles: ArticlesService) {}
 
   ngOnInit() {
