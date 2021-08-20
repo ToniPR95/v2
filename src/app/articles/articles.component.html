@@ -1,0 +1,17 @@
+<p>articles works!</p>
+
+<div class="content" role="main">
+  <div>
+    <h2>{{ title }}</h2>
+  </div>
+
+  <div>
+    <li *ngFor="let post of posts">
+      <a href="{{ post.path }}">
+        <span style="font-size: 20px; text-align: center">{{
+          post.title
+        }}</span></a
+      >
+    </li>
+  </div>
+</div>

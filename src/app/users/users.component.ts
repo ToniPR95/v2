@@ -19,15 +19,15 @@ export class UsersComponent implements OnInit {
     console.log(this.gridData);
   }
 
-  isRowInfo(event: Event) {
-    console.log(event);
+  isRowInfo(dataItem: object) {
+    console.log(dataItem);
+    const userID = dataItem;
+    console.log(userID);
   }
 
-  selectedKeysChange(rows: number[]) {
-    console.log(rows);
-  }
+  selectedKeysChange($event: any) {}
 
-  editHandler(event: any) {
-    console.log(event);
+  editHandler(dataItem: any) {
+    console.log(dataItem);
   }
 }

@@ -36,7 +36,6 @@ import { UserComponent } from './user/user.component';
     InputsModule,
     LabelModule,
     DialogModule,
-    HttpClientModule,
     IconsModule,
     ButtonsModule,
   ],

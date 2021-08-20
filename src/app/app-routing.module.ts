@@ -25,6 +25,11 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'articles',
+    loadChildren: () =>
+      import('./articles/articles.module').then((m) => m.ArticlesModule),
+  },
+  {
     path: '**',
     redirectTo: 'login',
     pathMatch: 'full',
