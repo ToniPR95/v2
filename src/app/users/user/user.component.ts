@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormControl } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -22,7 +23,13 @@ export class UserComponent implements OnInit {
     website: new FormControl(),
   });
 
-  constructor() {}
+  user!: { id: string };
 
-  ngOnInit(): void {}
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.user = {
+      id: this.route.snapshot.params['id'],
+    };
+  }
 }

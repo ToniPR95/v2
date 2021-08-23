@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { UsersService } from './../users.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -13,7 +14,7 @@ export class UsersComponent implements OnInit {
   public gridData: Observable<any> = new Observable();
   usersSubscribe: any;
 
-  constructor(private users: UsersService) {}
+  constructor(private users: UsersService, private router: Router) {}
 
   ngOnInit(): void {
     this.gridData = this.users.fetchUsers();
