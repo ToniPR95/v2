@@ -1,10 +1,10 @@
 <div class="posts-container">
-  <ol>
+  <ol style="list-style-type: none">
     <li
-      style="border-style: inset; width: 400px; margin: 10px"
+      style="border-style: inset; margin: 10px"
       *ngFor="let userpost of this.userposts"
     >
-      <span style="font-size: 20px; text-align: center; width: 400px">{{
+      <span style="font-size: 20px; text-align: center">{{
         userpost.title
       }}</span>
       <div>
