@@ -1,10 +1,73 @@
-<p>user works!</p>
+<div class="user-details-container">
+  <div class="input-container">
+    <p>Name</p>
+    <p style="border-style: inset; margin: 10px; width: 200px">
+      {{ user.name }}
+    </p>
+  </div>
+  <div class="input-container">
+    <p>Username</p>
+    <p style="border-style: inset; margin: 10px; width: 200px">
+      {{ user.username }}
+    </p>
+  </div>
+  <div class="input-container">
+    <p>Email</p>
+    <p style="border-style: inset; margin: 10px; width: 200px">
+      {{ user.email }}
+    </p>
+  </div>
+  <div class="input-container">
+    <p>Street</p>
+    <p style="border-style: inset; margin: 10px; width: 200px">
+      {{ user.address.street }}
+    </p>
+  </div>
+  <div class="input-container">
+    <p>Suite</p>
+    <p style="border-style: inset; margin: 10px; width: 200px">
+      {{ user.address.suite }}
+    </p>
+  </div>
+  <div class="input-container">
+    <p>City</p>
+    <p style="border-style: inset; margin: 10px; width: 200px">
+      {{ user.address.city }}
+    </p>
+  </div>
+  <div class="input-container">
+    <p>Zipcode</p>
+    <p style="border-style: inset; margin: 10px; width: 200px">
+      {{ user.address.zipcode }}
+    </p>
+  </div>
+  <div class="input-container">
+    <p>Latitude</p>
+    <p style="border-style: inset; margin: 10px; width: 200px">
+      {{ user.address.geo.lat }}
+    </p>
+  </div>
+  <div class="input-container">
+    <p>Longitude</p>
+    <p style="border-style: inset; margin: 10px; width: 200px">
+      {{ user.address.geo.lng }}
+    </p>
+  </div>
+  <div class="input-container">
+    <p>Phone</p>
+    <p style="border-style: inset; margin: 10px; width: 200px">
+      {{ user.phone }}
+    </p>
+  </div>
+  <div class="input-container">
+    <p>Website</p>
+    <p style="border-style: inset; margin: 10px; width: 200px">
+      {{ user.website }}
+    </p>
+  </div>
+</div>
 
 <button class="k-button" routerLink="/users">Nazaj</button>
-<br />
-<br />
-
-<p>{{ user.id }}</p>
 
 <div class="main">
   <div class="form">
@@ -137,6 +200,10 @@
           ></kendo-textbox>
         </kendo-formfield>
       </fieldset>
+      <div>
+        <br />
+        <button class="k-button" routerLink="/users">Nazaj</button>
+      </div>
     </form>
   </div>
   <div class="posts">

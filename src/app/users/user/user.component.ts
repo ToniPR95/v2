@@ -1,3 +1,4 @@
+import { UsersService } from './../../users.service';
 import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormControl } from '@angular/forms';
@@ -23,13 +24,23 @@ export class UserComponent implements OnInit {
     website: new FormControl(),
   });
 
-  user!: { id: string };
+  public user: any;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private userDetails: UsersService
+  ) {}
 
   ngOnInit(): void {
-    this.user = {
-      id: this.route.snapshot.params['id'],
-    };
+    let id = this.route.snapshot.params['id'];
+    this.userDetails.getUserById(id).subscribe(
+      (response) => {
+        console.log(response);
+        this.user = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }

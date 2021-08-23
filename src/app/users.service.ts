@@ -10,4 +10,8 @@ export class UsersService {
   fetchUsers() {
     return this.http.get('https://jsonplaceholder.typicode.com/users/');
   }
+
+  getUserById(id: string) {
+    return this.http.get('https://jsonplaceholder.typicode.com/users/' + id);
+  }
 }

@@ -28,7 +28,6 @@ export class UsersComponent implements OnInit {
         console.log(error);
       }
     );
-    // console.log(this.usersSubscribe);
   }
 
   isRowInfo(dataItem: object) {
