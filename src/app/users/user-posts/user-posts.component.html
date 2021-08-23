@@ -4,14 +4,14 @@
       style="border-style: inset; margin: 10px"
       *ngFor="let userpost of this.userposts"
     >
-      <span style="font-size: 20px; text-align: center">{{
+      <span style="font-size: 20px; margin: 10px; text-align: center">{{
         userpost.title
       }}</span>
       <div>
-        <p>{{ userpost.body }}</p>
+        <p style="margin: 10px">{{ userpost.body }}</p>
       </div>
       <div>
-        <p>UserID: {{ userpost.userId }}</p>
+        <p style="margin: 10px">UserID: {{ userpost.userId }}</p>
       </div>
     </li>
   </ol>
