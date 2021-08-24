@@ -1,49 +1,26 @@
 <div class="posts-container">
   <ol style="list-style-type: none">
     <ng-container *ngFor="let userpost of this.userpostsByID">
-      <li style="border-style: inset; margin: 10px">
-        <div>
-          <span
+      <li>
+        <kendo-card style="width: auto; margin: 20px">
+          <kendo-card-header
             style="
-              font-size: 20px;
-              font-weight: bold;
-              color: rgb(121, 173, 190);
-              margin: 10px;
               display: flex;
               justify-content: space-between;
+              font-size: 15px;
+              font-weight: bold;
+              color: rgb(121, 173, 190);
             "
-            ><div>
+          >
+            <p>
               {{ userpost.title }}
-            </div>
-            <div>ID: {{ userpost.id }}</div>
-          </span>
-          <div>
-            <p style="margin: 10px">{{ userpost.body }}</p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div>
-          <kendo-card style="width: 800px">
-            <kendo-card-header
-              style="
-                display: flex;
-                justify-content: space-between;
-                font-size: 15px;
-                font-weight: bold;
-                color: rgb(121, 173, 190);
-              "
-            >
-              <p>
-                {{ userpost.title }}
-              </p>
-              <p>ID: {{ userpost.id }}</p>
-            </kendo-card-header>
-            <kendo-card-body>
-              {{ userpost.body }}
-            </kendo-card-body>
-          </kendo-card>
-        </div>
+            </p>
+            <p>ID: {{ userpost.id }}</p>
+          </kendo-card-header>
+          <kendo-card-body>
+            {{ userpost.body }}
+          </kendo-card-body>
+        </kendo-card>
       </li>
     </ng-container>
   </ol>
