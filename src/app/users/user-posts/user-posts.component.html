@@ -1,18 +1,25 @@
 <div class="posts-container">
   <ol style="list-style-type: none">
-    <li
-      style="border-style: inset; margin: 10px"
-      *ngFor="let userpost of this.userposts"
-    >
-      <span style="font-size: 20px; margin: 10px; text-align: center">{{
-        userpost.title
-      }}</span>
-      <div>
-        <p style="margin: 10px">{{ userpost.body }}</p>
-      </div>
-      <div>
-        <p style="margin: 10px">UserID: {{ userpost.userId }}</p>
-      </div>
-    </li>
+    <ng-container *ngFor="let userpost of this.userpostsByID">
+      <li style="border-style: inset; margin: 10px">
+        <div>
+          <span
+            style="
+              font-size: 20px;
+              margin: 10px;
+              display: flex;
+              justify-content: space-between;
+            "
+            ><div>
+              {{ userpost.title }}
+            </div>
+            <div>ID: {{ userpost.id }}</div>
+          </span>
+          <div>
+            <p style="margin: 10px">{{ userpost.body }}</p>
+          </div>
+        </div>
+      </li>
+    </ng-container>
   </ol>
 </div>
