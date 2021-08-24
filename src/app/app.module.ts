@@ -1,3 +1,4 @@
+import { InputsModule } from '@progress/kendo-angular-inputs';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { IconsModule } from '@progress/kendo-angular-icons';
@@ -28,6 +29,7 @@ import { LayoutModule } from '@progress/kendo-angular-layout';
     CommonModule,
     FormsModule,
     LayoutModule,
+    InputsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

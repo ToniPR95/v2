@@ -22,7 +22,29 @@
           </div>
         </div>
       </li>
+      <li>
+        <div>
+          <kendo-card style="width: 800px">
+            <kendo-card-header
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-size: 15px;
+                font-weight: bold;
+                color: rgb(121, 173, 190);
+              "
+            >
+              <p>
+                {{ userpost.title }}
+              </p>
+              <p>ID: {{ userpost.id }}</p>
+            </kendo-card-header>
+            <kendo-card-body>
+              {{ userpost.body }}
+            </kendo-card-body>
+          </kendo-card>
+        </div>
+      </li>
     </ng-container>
   </ol>
 </div>
-<!-- <kendo-card></kendo-card> -->
