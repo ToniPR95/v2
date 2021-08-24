@@ -14,6 +14,8 @@ import { DialogsModule } from '@progress/kendo-angular-dialog';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
+// import { LayoutModule } from "@progress/kendo-angular-layout";
+
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
   imports: [
@@ -26,6 +28,7 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
     ButtonsModule,
     CommonModule,
     FormsModule,
+    // LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],

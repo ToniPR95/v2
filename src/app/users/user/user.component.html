@@ -3,72 +3,77 @@
     <h2>Uporabnik</h2>
     <div class="input-container">
       <p>Name</p>
-      <p style="border-style: inset; margin: 10px; width: 200px">
-        {{ user.name }}
-      </p>
+      <kendo-textbox style="margin: 10px" placeholder="{{ user.name }}">
+      </kendo-textbox>
     </div>
     <div class="input-container">
       <p>Username</p>
-      <p style="border-style: inset; margin: 10px; width: 200px">
-        {{ user.username }}
-      </p>
+      <kendo-textbox style="margin: 10px" placeholder="{{ user.username }}">
+      </kendo-textbox>
     </div>
     <div class="input-container">
       <p>Email</p>
-      <p style="border-style: inset; margin: 10px; width: 200px">
-        {{ user.email }}
-      </p>
+      <kendo-textbox style="margin: 10px" placeholder="{{ user.email }}">
+      </kendo-textbox>
     </div>
     <div class="input-container">
       <p>Street</p>
-      <p style="border-style: inset; margin: 10px; width: 200px">
-        {{ user.address.street }}
-      </p>
+      <kendo-textbox
+        style="margin: 10px"
+        placeholder="{{ user.address.street }}"
+      >
+      </kendo-textbox>
     </div>
     <div class="input-container">
       <p>Suite</p>
-      <p style="border-style: inset; margin: 10px; width: 200px">
-        {{ user.address.suite }}
-      </p>
+      <kendo-textbox
+        style="margin: 10px"
+        placeholder="{{ user.address.suite }}"
+      >
+      </kendo-textbox>
     </div>
     <div class="input-container">
       <p>City</p>
-      <p style="border-style: inset; margin: 10px; width: 200px">
-        {{ user.address.city }}
-      </p>
+      <kendo-textbox style="margin: 10px" placeholder="{{ user.address.city }}">
+      </kendo-textbox>
     </div>
     <div class="input-container">
       <p>Zipcode</p>
-      <p style="border-style: inset; margin: 10px; width: 200px">
-        {{ user.address.zipcode }}
-      </p>
+      <kendo-textbox
+        style="margin: 10px"
+        placeholder="{{ user.address.zipcode }}"
+      >
+      </kendo-textbox>
     </div>
     <div class="input-container">
       <p>Latitude</p>
-      <p style="border-style: inset; margin: 10px; width: 200px">
-        {{ user.address.geo.lat }}
-      </p>
+      <kendo-textbox
+        style="margin: 10px"
+        placeholder="{{ user.address.geo.lat }}"
+      >
+      </kendo-textbox>
     </div>
     <div class="input-container">
       <p>Longitude</p>
-      <p style="border-style: inset; margin: 10px; width: 200px">
-        {{ user.address.geo.lng }}
-      </p>
+      <kendo-textbox
+        style="margin: 10px"
+        placeholder="{{ user.address.geo.lng }}"
+      >
+      </kendo-textbox>
     </div>
     <div class="input-container">
       <p>Phone</p>
-      <p style="border-style: inset; margin: 10px; width: 200px">
-        {{ user.phone }}
-      </p>
+      <kendo-textbox style="margin: 10px" placeholder="{{ user.phone }}">
+      </kendo-textbox>
     </div>
     <div class="input-container">
       <p>Website</p>
-      <p style="border-style: inset; margin: 10px; width: 200px">
-        {{ user.website }}
-      </p>
+      <kendo-textbox style="margin: 10px" placeholder="{{ user.website }}">
+      </kendo-textbox>
     </div>
     <button class="k-button" routerLink="/users">Nazaj</button>
   </div>
+
   <div class="posts">
     <h2>Komentarji</h2>
     <app-user-posts></app-user-posts>
