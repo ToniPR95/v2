@@ -23,6 +23,7 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { UserComponent } from './user/user.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
+import { LayoutModule } from '@progress/kendo-angular-layout';
 
 @NgModule({
   declarations: [UsersComponent, UserComponent, UserPostsComponent],
@@ -41,6 +42,7 @@ import { UserPostsComponent } from './user-posts/user-posts.component';
     DialogModule,
     IconsModule,
     ButtonsModule,
+    LayoutModule,
   ],
   providers: [UsersService, UserPostsService],
 })
