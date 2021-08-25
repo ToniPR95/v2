@@ -22,10 +22,11 @@ export class LoginComponent implements OnInit {
     ]),
   });
 
-
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.loginForm);
+  }
 
   public submitForm(): void {
     if (this.loginForm.controls.username.value === this.fakeUsername) {
@@ -56,5 +57,4 @@ export class LoginComponent implements OnInit {
       return true;
     }
   }
-
 }
