@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { User } from './User';
 
 @Component({
   selector: 'app-user',
@@ -25,7 +26,6 @@ export class UserComponent implements OnInit {
   });
 
   public user: any;
-  public userEmail: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -37,30 +37,26 @@ export class UserComponent implements OnInit {
     this.userDetails.getUserById(id).subscribe(
       (response) => {
         this.user = response;
-        console.log(this.user);
-        this.userEmail = this.user.email;
-        console.log(this.user.email);
-        console.log(this.userEmail);
-        this.userForm.controls.name.setValue(this.user.name);
-        this.userForm.controls.username.setValue(this.user.username);
-        this.userForm.controls.email.setValue(this.user.email);
-        this.userForm.controls.street.setValue(this.user.address.street);
-        this.userForm.controls.suite.setValue(this.user.address.suite);
-        this.userForm.controls.city.setValue(this.user.address.city);
-        this.userForm.controls.zipcode.setValue(this.user.address.zipcode);
-        this.userForm.controls.latitude.setValue(this.user.address.geo.lat);
-        this.userForm.controls.longitude.setValue(this.user.address.geo.lng);
-        this.userForm.controls.phone.setValue(this.user.phone);
-        this.userForm.controls.website.setValue(this.user.website);
-
-        // this.userForm.controls.email.setValue(this.user.email);
+        this.setUserForm(this.user);
       },
       (error) => {
         console.log(error);
       }
     );
-    // this.userForm.controls.name.setValue(this.user.name);
-    console.log(this.userForm.controls.email);
-    console.log(this.userEmail);
+  }
+
+  setUserForm(user: User) {
+    this.userForm.controls.name.setValue(user.name);
+    this.userForm.controls.username.setValue(user.username);
+    this.userForm.controls.email.setValue(user.email);
+    console.log(this.userForm.controls.street);
+    this.userForm.controls.street.setValue(user.address.street);
+    this.userForm.controls.suite.setValue(user.address.suite);
+    this.userForm.controls.city.setValue(user.address.city);
+    this.userForm.controls.zipcode.setValue(user.address.zipcode);
+    this.userForm.controls.latitude.setValue(user.address.geo.lat);
+    this.userForm.controls.longitude.setValue(user.address.geo.lng);
+    this.userForm.controls.phone.setValue(user.phone);
+    this.userForm.controls.website.setValue(user.website);
   }
 }

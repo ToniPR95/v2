@@ -1,194 +1,134 @@
 <div class="main">
-  <div class="user-details-container">
-    <h2>Uporabnik</h2>
-    <div class="input-container">
-      <p>Name</p>
-      <kendo-textbox style="margin: 10px" placeholder="{{ user.name }}">
-      </kendo-textbox>
+  <div style="width: 280px">
+    <h2 style="margin: 20px">Uporabnik</h2>
+    <form class="k-form k-form-horizontal" [formGroup]="userForm">
+      <fieldset class="k-form-fieldset">
+        <kendo-formfield class="input-container" orientation="horizontal">
+          <kendo-label class="name" [for]="name" text="Name"></kendo-label>
+          <kendo-textbox
+            formControlName="name"
+            #name
+            [readonly]="true"
+          ></kendo-textbox>
+        </kendo-formfield>
+
+        <kendo-formfield class="input-container" orientation="horizontal">
+          <kendo-label [for]="username" text="Username"></kendo-label>
+          <kendo-textbox formControlName="username" #username [readonly]="true">
+          </kendo-textbox>
+        </kendo-formfield>
+
+        <kendo-formfield class="input-container" orientation="horizontal">
+          <kendo-label class="email" [for]="email" text="Email"></kendo-label>
+          <kendo-textbox
+            formControlName="email"
+            #email
+            [readonly]="true"
+          ></kendo-textbox>
+        </kendo-formfield>
+
+        <kendo-formfield class="input-container" orientation="horizontal">
+          <kendo-label
+            class="street"
+            [for]="street"
+            text="Street"
+          ></kendo-label>
+          <kendo-textbox
+            formControlName="street"
+            #street
+            [readonly]="true"
+          ></kendo-textbox>
+        </kendo-formfield>
+
+        <kendo-formfield class="input-container" orientation="horizontal">
+          <kendo-label class="suite" [for]="suite" text="Suite"></kendo-label>
+          <kendo-textbox
+            formControlName="suite"
+            #suite
+            [readonly]="true"
+          ></kendo-textbox>
+        </kendo-formfield>
+
+        <kendo-formfield class="input-container" orientation="horizontal">
+          <kendo-label class="city" [for]="city" text="City"></kendo-label>
+          <kendo-textbox
+            formControlName="city"
+            #city
+            [readonly]="true"
+          ></kendo-textbox>
+        </kendo-formfield>
+
+        <kendo-formfield class="input-container" orientation="horizontal">
+          <kendo-label
+            class="zipcode"
+            [for]="zipcode"
+            text="Zipcode"
+          ></kendo-label>
+          <kendo-textbox
+            formControlName="zipcode"
+            #zipcode
+            [readonly]="true"
+          ></kendo-textbox>
+        </kendo-formfield>
+
+        <kendo-formfield class="input-container" orientation="horizontal">
+          <kendo-label
+            class="latitude"
+            [for]="latitude"
+            text="Latitude"
+          ></kendo-label>
+          <kendo-textbox
+            formControlName="latitude"
+            #latitude
+            [readonly]="true"
+          ></kendo-textbox>
+        </kendo-formfield>
+
+        <kendo-formfield class="input-container" orientation="horizontal">
+          <kendo-label
+            class="longitude"
+            [for]="longitude"
+            text="Longitude"
+          ></kendo-label>
+          <kendo-textbox
+            formControlName="longitude"
+            #longitude
+            [readonly]="true"
+          ></kendo-textbox>
+        </kendo-formfield>
+
+        <kendo-formfield class="input-container" orientation="horizontal">
+          <kendo-label class="phone" [for]="phone" text="Phone"></kendo-label>
+          <kendo-textbox
+            formControlName="phone"
+            #phone
+            [readonly]="true"
+          ></kendo-textbox>
+        </kendo-formfield>
+
+        <kendo-formfield class="input-container" orientation="horizontal">
+          <kendo-label
+            class="website"
+            [for]="website"
+            text="Website"
+          ></kendo-label>
+          <kendo-textbox
+            formControlName="website"
+            #website
+            [readonly]="true"
+          ></kendo-textbox>
+        </kendo-formfield>
+      </fieldset>
+    </form>
+    <div>
+      <button style="margin: 20px" kendoButton routerLink="/users">
+        <span class="k-icon k-i-arrow-60-left"></span> Nazaj
+      </button>
     </div>
-    <div class="input-container">
-      <p>Username</p>
-      <kendo-textbox style="margin: 10px" placeholder="{{ user.username }}">
-      </kendo-textbox>
-    </div>
-    <div class="input-container">
-      <p>Email</p>
-      <kendo-textbox style="margin: 10px" placeholder="{{ user.email }}">
-      </kendo-textbox>
-    </div>
-    <div class="input-container">
-      <p>Street</p>
-      <kendo-textbox
-        style="margin: 10px"
-        placeholder="{{ user.address.street }}"
-      >
-      </kendo-textbox>
-    </div>
-    <div class="input-container">
-      <p>Suite</p>
-      <kendo-textbox
-        style="margin: 10px"
-        placeholder="{{ user.address.suite }}"
-      >
-      </kendo-textbox>
-    </div>
-    <div class="input-container">
-      <p>City</p>
-      <kendo-textbox style="margin: 10px" placeholder="{{ user.address.city }}">
-      </kendo-textbox>
-    </div>
-    <div class="input-container">
-      <p>Zipcode</p>
-      <kendo-textbox
-        style="margin: 10px"
-        placeholder="{{ user.address.zipcode }}"
-      >
-      </kendo-textbox>
-    </div>
-    <div class="input-container">
-      <p>Latitude</p>
-      <kendo-textbox
-        style="margin: 10px"
-        placeholder="{{ user.address.geo.lat }}"
-      >
-      </kendo-textbox>
-    </div>
-    <div class="input-container">
-      <p>Longitude</p>
-      <kendo-textbox
-        style="margin: 10px"
-        placeholder="{{ user.address.geo.lng }}"
-      >
-      </kendo-textbox>
-    </div>
-    <div class="input-container">
-      <p>Phone</p>
-      <kendo-textbox style="margin: 10px" placeholder="{{ user.phone }}">
-      </kendo-textbox>
-    </div>
-    <div class="input-container">
-      <p>Website</p>
-      <kendo-textbox style="margin: 10px" placeholder="{{ user.website }}">
-      </kendo-textbox>
-    </div>
-    <button kendoButton routerLink="/users">
-      <span class="k-icon k-i-arrow-60-left"></span> Nazaj
-    </button>
   </div>
 
   <div class="posts">
-    <h2>Komentarji</h2>
+    <h2 style="margin: 20px">Komentarji</h2>
     <app-user-posts></app-user-posts>
   </div>
 </div>
-<p>{{ userEmail }}</p>
-
-<form class="k-form k-form-horizontal" [formGroup]="userForm">
-  <fieldset class="k-form-fieldset">
-    <legend class="k-form-legend" style="font-weight: bold">Login</legend>
-
-    <kendo-formfield orientation="horizontal">
-      <kendo-label class="name" [for]="name" text="Name"></kendo-label>
-      <kendo-textbox
-        formControlName="name"
-        #name
-        [readonly]="true"
-      ></kendo-textbox>
-    </kendo-formfield>
-
-    <kendo-formfield orientation="horizontal">
-      <kendo-label [for]="username" text="Username"></kendo-label>
-      <kendo-textbox formControlName="username" #username [readonly]="true">
-      </kendo-textbox>
-    </kendo-formfield>
-
-    <kendo-formfield orientation="horizontal">
-      <kendo-label class="email" [for]="email" text="Email"></kendo-label>
-      <kendo-textbox
-        formControlName="email"
-        #email
-        [readonly]="true"
-      ></kendo-textbox>
-    </kendo-formfield>
-
-    <kendo-formfield orientation="horizontal">
-      <kendo-label class="street" [for]="street" text="Street"></kendo-label>
-      <kendo-textbox
-        formControlName="street"
-        #street
-        [readonly]="true"
-      ></kendo-textbox>
-    </kendo-formfield>
-
-    <kendo-formfield orientation="horizontal">
-      <kendo-label class="suite" [for]="suite" text="Suite"></kendo-label>
-      <kendo-textbox
-        formControlName="suite"
-        #suite
-        [readonly]="true"
-      ></kendo-textbox>
-    </kendo-formfield>
-
-    <kendo-formfield orientation="horizontal">
-      <kendo-label class="city" [for]="city" text="City"></kendo-label>
-      <kendo-textbox
-        formControlName="city"
-        #city
-        [readonly]="true"
-      ></kendo-textbox>
-    </kendo-formfield>
-
-    <kendo-formfield orientation="horizontal">
-      <kendo-label class="zipcode" [for]="zipcode" text="Zipcode"></kendo-label>
-      <kendo-textbox
-        formControlName="zipcode"
-        #zipcode
-        [readonly]="true"
-      ></kendo-textbox>
-    </kendo-formfield>
-
-    <kendo-formfield orientation="horizontal">
-      <kendo-label
-        class="latitude"
-        [for]="latitude"
-        text="Latitude"
-      ></kendo-label>
-      <kendo-textbox
-        formControlName="latitude"
-        #latitude
-        [readonly]="true"
-      ></kendo-textbox>
-    </kendo-formfield>
-
-    <kendo-formfield orientation="horizontal">
-      <kendo-label
-        class="longitude"
-        [for]="longitude"
-        text="Longitude"
-      ></kendo-label>
-      <kendo-textbox
-        formControlName="longitude"
-        #longitude
-        [readonly]="true"
-      ></kendo-textbox>
-    </kendo-formfield>
-
-    <kendo-formfield orientation="horizontal">
-      <kendo-label class="phone" [for]="phone" text="Phone"></kendo-label>
-      <kendo-textbox
-        formControlName="phone"
-        #phone
-        [readonly]="true"
-      ></kendo-textbox>
-    </kendo-formfield>
-
-    <kendo-formfield orientation="horizontal">
-      <kendo-label class="website" [for]="website" text="Website"></kendo-label>
-      <kendo-textbox
-        formControlName="website"
-        #website
-        [readonly]="true"
-      ></kendo-textbox>
-    </kendo-formfield>
-  </fieldset>
-</form>

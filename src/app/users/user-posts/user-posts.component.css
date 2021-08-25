@@ -1,1 +1,4 @@
-
+.posts.input-container>.card {
+  width: auto;
+  margin: 20px;
+}
