@@ -33,8 +33,8 @@ export class LoginComponent implements OnInit {
   }
 
   public submitForm(): void {
-    this.loginService.getLoginUsername(this.loginUser);
     this.loginUser = this.loginForm.controls.username.value;
+    this.loginService.getLoginUsername(this.loginUser);
     console.log(this.loginUser);
     if (this.loginForm.controls.username.value === this.fakeUsername) {
       if (this.loginForm.controls.password.value === this.fakePassword) {
