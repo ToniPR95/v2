@@ -24,6 +24,7 @@ import { LabelModule } from '@progress/kendo-angular-label';
 import { UserComponent } from './user/user.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { LayoutModule } from '@progress/kendo-angular-layout';
+import { LoginService } from '../login.service';
 
 @NgModule({
   declarations: [UsersComponent, UserComponent, UserPostsComponent],
@@ -44,6 +45,6 @@ import { LayoutModule } from '@progress/kendo-angular-layout';
     ButtonsModule,
     LayoutModule,
   ],
-  providers: [UsersService, UserPostsService],
+  providers: [UsersService, UserPostsService, LoginService],
 })
 export class UsersModule {}

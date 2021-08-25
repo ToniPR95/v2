@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,8 @@ export class LoginComponent implements OnInit {
   errorMessage: string = '';
   isFailedLogin = false;
 
+  public loginUser!: string;
+
   loginForm: FormGroup = new FormGroup({
     username: new FormControl('', Validators.required),
     password: new FormControl('', [
@@ -22,13 +25,17 @@ export class LoginComponent implements OnInit {
     ]),
   });
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private loginService: LoginService) {}
 
   ngOnInit(): void {
     console.log(this.loginForm);
+    console.log(this.loginForm.controls.username.value);
   }
 
   public submitForm(): void {
+    this.loginService.getLoginUsername(this.loginUser);
+    this.loginUser = this.loginForm.controls.username.value;
+    console.log(this.loginUser);
     if (this.loginForm.controls.username.value === this.fakeUsername) {
       if (this.loginForm.controls.password.value === this.fakePassword) {
         this.router.navigate(['/welcome-screen']);

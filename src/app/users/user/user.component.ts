@@ -49,7 +49,6 @@ export class UserComponent implements OnInit {
     this.userForm.controls.name.setValue(user.name);
     this.userForm.controls.username.setValue(user.username);
     this.userForm.controls.email.setValue(user.email);
-    console.log(this.userForm.controls.street);
     this.userForm.controls.street.setValue(user.address.street);
     this.userForm.controls.suite.setValue(user.address.suite);
     this.userForm.controls.city.setValue(user.address.city);

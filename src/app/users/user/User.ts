@@ -6,7 +6,7 @@ export interface User {
     street: string;
     suite: string;
     city: string;
-    zipcode?: string;
+    zipcode: string;
     geo: {
       lat: string;
       lng: string;
@@ -14,4 +14,9 @@ export interface User {
   };
   phone: string;
   website: string;
+}
+
+export interface Test {
+  test1: string;
+  test2?: string;
 }
