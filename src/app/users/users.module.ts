@@ -25,9 +25,10 @@ import { UserComponent } from './user/user.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { LoginService } from '../login.service';
+import { AlbumsComponent } from './albums/albums.component';
 
 @NgModule({
-  declarations: [UsersComponent, UserComponent, UserPostsComponent],
+  declarations: [UsersComponent, UserComponent, UserPostsComponent, AlbumsComponent],
   imports: [
     CommonModule,
     UsersRoutingModule,
