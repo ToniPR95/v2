@@ -1,3 +1,4 @@
+import { PhotosService } from './../photos.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { UserPostsService } from './../user-posts.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,7 +29,12 @@ import { LoginService } from '../login.service';
 import { AlbumsComponent } from './albums/albums.component';
 
 @NgModule({
-  declarations: [UsersComponent, UserComponent, UserPostsComponent, AlbumsComponent],
+  declarations: [
+    UsersComponent,
+    UserComponent,
+    UserPostsComponent,
+    AlbumsComponent,
+  ],
   imports: [
     CommonModule,
     UsersRoutingModule,
@@ -46,6 +52,6 @@ import { AlbumsComponent } from './albums/albums.component';
     ButtonsModule,
     LayoutModule,
   ],
-  providers: [UsersService, UserPostsService, LoginService],
+  providers: [UsersService, UserPostsService, LoginService, PhotosService],
 })
 export class UsersModule {}

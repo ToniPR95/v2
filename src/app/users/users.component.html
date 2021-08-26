@@ -63,7 +63,11 @@
       >
         <span class="k-icon k-i-preview"></span>
       </button>
-      <button kendoGridEditCommand class="k-button" routerLink="/users/albums">
+      <button
+        kendoGridEditCommand
+        class="k-button"
+        routerLink="/users/albums/{{ dataItem.id }}"
+      >
         <span class="k-icon k-i-image" size="medium"></span>
       </button>
     </ng-template>
