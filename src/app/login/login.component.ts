@@ -10,8 +10,8 @@ import { LoginService } from '../login.service';
 })
 export class LoginComponent implements OnInit {
   public submitted: boolean = false;
-  fakeUsername: string = 'Luka';
-  fakePassword: string = 'TestingPassword';
+  fakeUsername: string = 'Marko';
+  fakePassword: string = 'inden123';
   errorMessage: string = '';
   isFailedLogin = false;
 

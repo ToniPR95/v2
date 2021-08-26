@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -6,17 +7,27 @@ import { LoginService } from '../login.service';
   templateUrl: './welcome-screen.component.html',
   styleUrls: ['./welcome-screen.component.css'],
 })
-export class WelcomeScreenComponent implements OnInit {
+export class WelcomeScreenComponent implements OnInit, OnDestroy {
   public currentUser: any;
+  ngUnsubscribe: any;
 
-  constructor(private loginService: LoginService) {}
+  subscription: Subscription;
+
+  constructor(private loginService: LoginService) {
+    this.subscription = this.loginService.loginUsername.subscribe(
+      (newusername) => {
+        this.currentUser = newusername;
+      }
+    );
+  }
 
   ngOnInit(): void {
-    this.loginService.loginUsername.subscribe((newusername) => {
-      this.currentUser = newusername;
-    });
     if (this.currentUser == '') {
       this.currentUser = sessionStorage.getItem('user');
     }
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }
