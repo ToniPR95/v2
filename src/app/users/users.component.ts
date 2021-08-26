@@ -18,10 +18,8 @@ export class UsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.gridData = this.users.fetchUsers();
-    console.log(this.gridData);
     this.usersSubscribe = this.gridData.subscribe(
       (response) => {
-        console.log(response);
         this.usersSubscribe = response;
       },
       (error) => {
@@ -31,14 +29,10 @@ export class UsersComponent implements OnInit {
   }
 
   isRowInfo(dataItem: object) {
-    console.log(dataItem);
     const userID = dataItem;
-    console.log(userID);
   }
 
   selectedKeysChange($event: any) {}
 
-  editHandler(dataItem: any) {
-    console.log(dataItem);
-  }
+  editHandler(dataItem: any) {}
 }

@@ -24,7 +24,6 @@ export class UserPostsComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.userPosts.getUserPosts().subscribe(
       (response) => {
-        console.log(response);
         this.userposts = response;
         for (var index in this.userposts) {
           if (this.userposts[index].userId == this.id) {
