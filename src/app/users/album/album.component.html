@@ -1,12 +1,7 @@
-<h2>Albumi</h2>
-
-<div class="example-wrapper">
-  <p>T-shirt size:</p>
-  <kendo-dropdownlist [data]="listItems"> </kendo-dropdownlist>
-</div>
+<p>album works!</p>
 
 <div class="posts-container">
-  <ng-container *ngFor="let album of this.albums">
+  <ng-container *ngFor="let photo of this.photos">
     <kendo-card class="card" style="width: auto; margin: 20px">
       <kendo-card-header
         class="card-header"
@@ -19,13 +14,13 @@
         "
       >
         <p>
-          {{ album.title }}
+          {{ photo.title }}
         </p>
-        <p>ID: {{ album.id }}</p>
+        <p>ID: {{ photo.id }}</p>
       </kendo-card-header>
       <kendo-card-body>
-        <!-- <app-album></app-album> -->
-        <!-- <img src="{{ photo.url }}" alt="" /> -->
+        <app-album></app-album>
+        <img src="{{ photo.url }}" alt="" />
       </kendo-card-body>
     </kendo-card>
   </ng-container>

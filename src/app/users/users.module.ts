@@ -1,3 +1,4 @@
+import { AlbumsService } from './../albums.service';
 import { PhotosService } from './../photos.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { UserPostsService } from './../user-posts.service';
@@ -27,6 +28,8 @@ import { UserPostsComponent } from './user-posts/user-posts.component';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { LoginService } from '../login.service';
 import { AlbumsComponent } from './albums/albums.component';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { AlbumComponent } from './album/album.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,7 @@ import { AlbumsComponent } from './albums/albums.component';
     UserComponent,
     UserPostsComponent,
     AlbumsComponent,
+    AlbumComponent,
   ],
   imports: [
     CommonModule,
@@ -51,7 +55,14 @@ import { AlbumsComponent } from './albums/albums.component';
     IconsModule,
     ButtonsModule,
     LayoutModule,
+    DropDownsModule,
   ],
-  providers: [UsersService, UserPostsService, LoginService, PhotosService],
+  providers: [
+    UsersService,
+    UserPostsService,
+    LoginService,
+    PhotosService,
+    AlbumsService,
+  ],
 })
 export class UsersModule {}
