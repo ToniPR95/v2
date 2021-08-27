@@ -9,31 +9,31 @@ import { PhotosService } from 'src/app/photos.service';
   styleUrls: ['./albums.component.css'],
 })
 export class AlbumsComponent implements OnInit {
+  public listItems: Array<string> = [];
+
   public albums: any;
   public photos: any;
   albumId: any;
+
+  albumsTitles: any;
+  length: any;
 
   constructor(
     private route: ActivatedRoute,
     private userAlbums: AlbumsService
   ) {}
 
-  public data: Array<string> = [
-    'X-Small',
-    'Small',
-    'Medium',
-    'Large',
-    'X-Large',
-    '2X-Large',
-  ];
-
   ngOnInit(): void {
+    this.albumsTitles = [];
     const id = this.route.snapshot.params['id'];
 
     this.userAlbums.fetchAlbumsByUserId(id).subscribe(
       (response) => {
         this.albums = response;
-        console.log(this.albums);
+        for (var index in this.albums) {
+          this.length = this.albumsTitles.push(this.albums[index].title);
+        }
+        this.listItems = this.albumsTitles;
       },
       (error) => {
         console.log(error);

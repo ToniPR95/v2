@@ -9,11 +9,10 @@ import { AlbumComponent } from './album/album.component';
 
 const routes: Routes = [
   { path: '', component: UsersComponent },
-  { path: 'user', component: UserComponent },
-  { path: 'user/:id', component: UserComponent },
+  { path: ':id', component: UserComponent },
   { path: 'user-posts', component: UserPostsComponent },
-  { path: 'albums/:id', component: AlbumsComponent },
-  { path: 'albums/photos/:albumId', component: AlbumComponent },
+  { path: ':id/albums', component: AlbumsComponent },
+  { path: 'albums/:albumId/photos', component: AlbumComponent },
 ];
 
 @NgModule({

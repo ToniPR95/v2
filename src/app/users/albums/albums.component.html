@@ -2,7 +2,7 @@
 
 <div class="example-wrapper">
   <p>Dropdownlist</p>
-  <kendo-dropdownlist [data]="data"> </kendo-dropdownlist>
+  <kendo-dropdownlist [data]="listItems"> </kendo-dropdownlist>
 </div>
 
 <div class="posts-container">
@@ -26,7 +26,7 @@
       <kendo-card-body>
         <button
           class="k-button"
-          routerLink="/users/albums/photos/{{ album.id }}"
+          routerLink="/users/albums/{{ album.id }}/photos"
         >
           <span class="k-icon k-i-image" size="medium"></span>
         </button>
