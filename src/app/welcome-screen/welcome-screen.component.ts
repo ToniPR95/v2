@@ -9,7 +9,6 @@ import { LoginService } from '../login.service';
 })
 export class WelcomeScreenComponent implements OnInit, OnDestroy {
   public currentUser: any;
-  ngUnsubscribe: any;
 
   subscription: Subscription;
 

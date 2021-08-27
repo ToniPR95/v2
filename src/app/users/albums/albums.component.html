@@ -1,8 +1,8 @@
 <h2>Albumi</h2>
 
 <div class="example-wrapper">
-  <p>T-shirt size:</p>
-  <kendo-dropdownlist [data]="listItems"> </kendo-dropdownlist>
+  <p>Dropdownlist</p>
+  <kendo-dropdownlist [data]="data"> </kendo-dropdownlist>
 </div>
 
 <div class="posts-container">
@@ -21,11 +21,16 @@
         <p>
           {{ album.title }}
         </p>
-        <p>ID: {{ album.id }}</p>
+        <p>albumID: {{ album.id }}</p>
       </kendo-card-header>
       <kendo-card-body>
+        <button
+          class="k-button"
+          routerLink="/users/albums/photos/{{ album.id }}"
+        >
+          <span class="k-icon k-i-image" size="medium"></span>
+        </button>
         <!-- <app-album></app-album> -->
-        <!-- <img src="{{ photo.url }}" alt="" /> -->
       </kendo-card-body>
     </kendo-card>
   </ng-container>

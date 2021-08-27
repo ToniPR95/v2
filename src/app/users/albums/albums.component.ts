@@ -15,11 +15,10 @@ export class AlbumsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private userPhotos: PhotosService,
     private userAlbums: AlbumsService
   ) {}
 
-  public listItems: Array<string> = [
+  public data: Array<string> = [
     'X-Small',
     'Small',
     'Medium',
@@ -30,17 +29,6 @@ export class AlbumsComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
-    // this.id = this.route.snapshot.params['id'];
-
-    // this.userPosts.fetchPhotos().subscribe(
-    //   (response) => {
-    //     this.photos = response;
-    //     console.log(this.photos);
-    //   },
-    //   (error) => {
-    //     console.log(error);
-    //   }
-    // );
 
     this.userAlbums.fetchAlbumsByUserId(id).subscribe(
       (response) => {
