@@ -16,6 +16,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { PagerModule } from '@progress/kendo-angular-pager';
+
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -32,6 +34,7 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
     LayoutModule,
     InputsModule,
     DropDownsModule,
+    PagerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
