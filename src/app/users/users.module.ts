@@ -1,3 +1,4 @@
+import { PagerModule } from '@progress/kendo-angular-pager';
 import { AlbumsService } from './../albums.service';
 import { PhotosService } from './../photos.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -56,6 +57,7 @@ import { AlbumComponent } from './album/album.component';
     ButtonsModule,
     LayoutModule,
     DropDownsModule,
+    PagerModule,
   ],
   providers: [
     UsersService,
