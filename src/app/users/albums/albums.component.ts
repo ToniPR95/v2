@@ -23,6 +23,8 @@ export class AlbumsComponent implements OnInit {
     private userAlbums: AlbumsService
   ) {}
 
+  isAlbumSelected() {}
+
   ngOnInit(): void {
     this.albumsTitles = [];
     const id = this.route.snapshot.params['id'];

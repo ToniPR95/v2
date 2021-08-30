@@ -17,33 +17,5 @@
   </kendo-dropdownlist>
 </div>
 
-<div class="posts-container">
-  <ng-container *ngFor="let album of this.albums">
-    <kendo-card class="card" style="width: auto; margin: 20px">
-      <kendo-card-header
-        class="card-header"
-        style="
-          display: flex;
-          justify-content: space-between;
-          font-size: 15px;
-          font-weight: bold;
-          color: rgb(121, 173, 190);
-        "
-      >
-        <p>
-          {{ album.title }}
-        </p>
-        <p>albumID: {{ album.id }}</p>
-      </kendo-card-header>
-      <kendo-card-body>
-        <button
-          class="k-button"
-          routerLink="/users/albums/{{ album.id }}/photos"
-        >
-          <span class="k-icon k-i-image" size="medium"></span>
-        </button>
-        <!-- <app-album></app-album> -->
-      </kendo-card-body>
-    </kendo-card>
-  </ng-container>
-</div>
+<hr />
+<app-album *ngIf="isAlbumSelected()"></app-album>
