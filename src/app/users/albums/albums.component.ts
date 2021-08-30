@@ -9,7 +9,7 @@ import { PhotosService } from 'src/app/photos.service';
   styleUrls: ['./albums.component.css'],
 })
 export class AlbumsComponent implements OnInit {
-  public listItems: Array<string> = [];
+  public listItems: Array<{ text: string; value: number }> = [];
 
   public albums: any;
   public photos: any;
@@ -31,9 +31,15 @@ export class AlbumsComponent implements OnInit {
       (response) => {
         this.albums = response;
         for (var index in this.albums) {
-          this.length = this.albumsTitles.push(this.albums[index].title);
+          // this.length = this.albumsTitles.push(this.albums[index].title);
+          // this.length = this.albumsTitles.push(this.albums[index].id);
+          this.length = this.albumsTitles.push({
+            text: this.albums[index].title,
+            value: this.albums[index].id,
+          });
         }
         this.listItems = this.albumsTitles;
+        console.log(this.listItems);
       },
       (error) => {
         console.log(error);

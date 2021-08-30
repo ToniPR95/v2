@@ -1,4 +1,41 @@
-<p>album works!</p>
+<div class="wrapper">
+  <div class="content-container">
+    <div>
+      <br />
+      <span class="title">AlbumId: {{ albumId }} </span>
+    </div>
+    <ng-container *ngFor="let photo of this.photos">
+      <kendo-card class="card" style="width: auto; margin: 20px">
+        <kendo-card-header
+          class="card-header"
+          style="
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: bold;
+            color: rgb(121, 173, 190);
+          "
+        >
+          <p>
+            {{ photo.title }}
+          </p>
+          <p>photoID: {{ photo.id }}</p>
+        </kendo-card-header>
+        <kendo-card-body>
+          <img src="{{ photo.url }}" alt="" />
+        </kendo-card-body>
+      </kendo-card>
+    </ng-container>
+  </div>
+  <!-- <kendo-datapager
+    [style.width.%]="100"
+    [pageSize]="pageSize"
+    [skip]="skip"
+    [total]="total"
+    (pageChange)="onPageChange($event)"
+  >
+  </kendo-datapager> -->
+</div>
 
 <div class="posts-container">
   <ng-container *ngFor="let photo of this.photos">

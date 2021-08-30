@@ -1,8 +1,27 @@
 <h2>Albumi</h2>
 
-<div class="example-wrapper">
-  <p>Dropdownlist</p>
-  <kendo-dropdownlist [data]="listItems"> </kendo-dropdownlist>
+<div class="dropdownlist-wrapper">
+  <p>Izberi album:</p>
+  <kendo-dropdownlist
+    [data]="listItems"
+    [textField]="'text'"
+    [valueField]="'value'"
+  >
+    <ng-template kendoDropDownListItemTemplate let-dataItem>
+      <span
+        class="template"
+        routerLink="/users/albums/{{ dataItem.value }}/photos"
+        >{{ dataItem.text }}</span
+      ><a routerLink="/users/albums/{{ dataItem.value }}/photos">
+        <button
+          class="k-button"
+          routerLink="/users/albums/{{ dataItem.value }}/photos"
+        >
+          <span class="k-icon k-i-image" size="medium"></span>
+        </button>
+      </a>
+    </ng-template>
+  </kendo-dropdownlist>
 </div>
 
 <div class="posts-container">
